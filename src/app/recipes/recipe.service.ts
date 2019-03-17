@@ -26,9 +26,14 @@ export class RecipeService {
                 new Ingredient('Buns', 2),
                 new Ingredient('Meat', 3)
             ])
-    ];
+    ];;
 
     constructor(private slService: ShoppingListService) { }
+
+    setRecipes(recipes: Recipe[]) {
+        this.recipes = recipes;
+        this.recipeChanged.next(this.recipes.slice());
+    }
 
     getRecipes() {
         return this.recipes.slice();
