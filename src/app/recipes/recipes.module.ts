@@ -10,6 +10,7 @@ import { RecipeStartComponent } from './recipe-start/recipe-start.component';
 import { RecipesComponent } from './recipes.component';
 import { RecipesRoutingModule } from './recipes-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { AuthModule } from '../auth/auth.module';
 
 
 @NgModule({
@@ -22,9 +23,9 @@ import { SharedModule } from '../shared/shared.module';
     ],
     imports: [
         SharedModule,
+        AuthModule,
         ReactiveFormsModule,
         RecipesRoutingModule
-    ],
-    exports: [RecipesComponent]
+    ]
 })
 export class RecipesModule { }
